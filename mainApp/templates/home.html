@@ -1,0 +1,141 @@
+<!--
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Ads</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+<h1>
+    Home page
+</h1>
+<a href="{% url 'loginPage' %}">
+Login
+</a>
+<br>
+<br>
+<a href="{% url 'registerPage' %}">
+Sign Up
+</a>
+<br>
+<br>
+<a href="{% url 'dashboard' %}">
+Dashboard
+</a>
+<br>
+<br>
+<a href="{% url 'feed' %}">
+Feed
+</a>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertisement Hub</title>
+    <!-- Include Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+        .jumbotron {
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+        }
+        .cta-button {
+            background-color: #ff6b6b;
+            color: #ffffff;
+        }
+        .cta-button:hover {
+            background-color: #e95c5c;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Advertisement Hub</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'loginPage' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="{% url 'dashboard' %}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'feed' %}">Feed</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid text-center" style="background-color: blue">
+        <div class="container">
+            <h1 class="display-4">Welcome to Advertisement Hub</h1>
+            <p class="lead">Explore Opportunities, Post Ads, and Connect with the World</p>
+            <a href="#" class="btn btn-lg cta-button">Get Started</a>
+        </div>
+    </div>
+    <p>
+        **Unleash the Power of Advertisement Hub**
+Welcome to Advertisement Hub, where limitless possibilities await you! 🚀
+
+Are you ready to explore a world of opportunities, connect with a vibrant community, and showcase your offerings like never before? Look no further! Advertisement Hub is your ultimate destination for all things advertisement-related. Let us take you on a journey through the awesomeness that awaits you:
+
+**Connect and Collaborate:**
+Connect with a diverse network of individuals, entrepreneurs, and businesses from around the globe. Share your ideas, products, services, and offerings to a captive audience hungry for innovation.
+
+**Create Impactful Ads:**
+Unleash your creativity and craft stunning ads that captivate hearts and minds. Our user-friendly ad creation tools empower you to present your message with precision and flair.
+
+**Wide Audience Reach:**
+Reach a massive and engaged audience across various categories, ensuring that your ad reaches the right people at the right time. Whether you're selling, hiring, promoting events, or sharing your passion project, Advertisement Hub's platform ensures maximum visibility.
+
+**Discover New Opportunities:**
+Exploring opportunities has never been easier. Find jobs, services, products, and events tailored to your interests and needs. Stay up-to-date with the latest trends and offerings in your niche.
+
+**User-Focused Dashboard:**
+Your personalized dashboard gives you complete control over your ads, engagements, and interactions. Monitor ad performance, track responses, and make informed decisions to optimize your reach.
+
+**Community Engagement:**
+Engage in conversations, discussions, and collaborations with like-minded individuals. Share insights, learn from others, and build lasting connections that transcend virtual borders.
+
+**Safe and Secure:**
+Your security and privacy are our top priorities. Our platform ensures a secure environment for all users, allowing you to browse, interact, and transact with peace of mind.
+
+**Get Started Today:**
+Join the Advertisement Hub family and embark on a journey that amplifies your voice, vision, and aspirations. Whether you're an entrepreneur, job seeker, creative professional, or simply an individual seeking to explore and contribute, Advertisement Hub welcomes you with open arms.
+
+Dive into the realm of endless possibilities today. Explore, create, connect, and thrive at Advertisement Hub. Your journey to success begins now!
+
+**Ready to Begin?**
+Sign up now and be part of something extraordinary. Your adventure awaits at Advertisement Hub. Let's revolutionize the way you advertise and connect. Join us now! 🌟
+    </p>
+    <!-- Include Bootstrap JS scripts here (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

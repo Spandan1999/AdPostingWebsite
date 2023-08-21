@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail post</title>
+    <!-- Include Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add custom CSS styles here */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .post-details {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .field-box {
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+         .field-box:hover {
+            background-color: #f8f9fa;
+        }
+        .content-box {
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .content-box:hover {
+            background-color: #f8f9fa;
+            }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="post-details">
+                <h1 class="mb-4">Ad Details</h1>
+                <div class="field-box">
+                    <h3 class="mb-2">Ad Type:</h3>
+                    <p>{{ post.ad_type }}</p>
+                </div>
+                <div class="field-box">
+                    <h3 class="mb-2">Ad Title:</h3>
+                    <p>{{ post.ad_title }}</p>
+                </div>
+                <div class="field-box">
+                    <h3 class="mb-2">Contact Info:</h3>
+                    <p>{{ post.contact_info }}</p>
+                </div>
+                <div class="field-box">
+                    <h3 class="mb-2">Address/Location:</h3>
+                    <p>{{ post.address }}</p>
+                </div>
+                <div class="field-box">
+                    <h3 class="mb-2">Price:</h3>
+                    <p>{{ post.price }}</p>
+                </div>
+                <div class="field-box">
+                    <h3 class="mb-2">Created at:</h3>
+                    <p>{{ post.created_at }}</p>
+                </div>
+                <div class="field-box">
+                    <h3 class="mb-2">Created by:</h3>
+                    <p>{{ post.user.username }}</p>
+                </div>
+                <div class="content-box">
+                    <h3 class="mb-2">Ad Description:</h3>
+                    <p>{{ post.ad_description }}</p>
+                </div>
+                <br>
+                <a href="#" class="btn btn-primary" onclick="goBack()">Go Back</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS scripts here (optional) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+</body>
+</html>

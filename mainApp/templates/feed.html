@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    <!-- Include Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .feed-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .feed-card {
+            border: none;
+            background-color: #fff;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s, background-color 0.3s;
+            margin: 10px;
+        }
+
+        .feed-card:hover {
+            background-color: #E6ECF5;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Welcome, {{ user.username }}</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'dashboard'%}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logoutUser'%}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card feed-container">
+                <div class="card-body">
+                    <h2 class="card-title">Feed</h2>
+                    <div class="row">
+                        {% for post in posts %}
+                            <div class="col-md-4">
+                                <div class="card feed-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ post.ad_type }}</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">{{ post.ad_title }}</h6>
+                                        <p class="card-text">Created by: {{ post.user.username }}</p>
+                                        <p class="card-text">{{ post.created_at }}</p>
+                                        <a href="{% url 'ad' post.id %}">Click here to read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS scripts here (optional) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</script>
+</body>
+</html>
